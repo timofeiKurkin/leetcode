@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "es2017",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "isolatedModules": true,
+    "strict": true,
+    "esModuleInterop": true,
+  },
+  "include": [
+    "easy/*.ts", "easy/70. Climbing Stairs/70. Climbing Stairs.ts", "easy/121. Best Time to Buy and Sell Stock/121. Best Time to Buy and Sell Stock.ts", "easy/141. Linked List Cycle/141. Linked List Cycle.ts", "easy/206. Reverse Linked List/206. Reverse Linked List.ts", "easy/27. Remove Element/27. Remove Element.ts", "easy/83. Remove Duplicates from Sorted List/83. Remove Duplicates from Sorted List.ts", "easy/136. Single Number/136. Single Number.ts", "easy/203. Remove Linked List Elements/203. Remove Linked List Elements.ts", "easy/268. Missing Number/268. Missing Number.ts", "easy/303. Range Sum Query - Immutable/303. Range Sum Query - Immutable.ts", "easy/448. Find All Numbers Disappeared in an Array/448. Find All Numbers Disappeared in an Array.ts", "easy/1331. Rank Transform of an Array/1331. Rank Transform of an Array.ts", "easy/876. Middle of the Linked List/876. Middle of the Linked List.ts", "easy/338. Counting Bits/338. Counting Bits.ts",
+  ],
+  "exclude": [],
+}
