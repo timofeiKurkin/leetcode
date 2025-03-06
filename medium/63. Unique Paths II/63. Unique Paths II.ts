@@ -23,5 +23,4 @@ function uniquePathsWithObstacles(obstacleGrid: number[][]): number {
     }
 
     return dp[m - 1][n - 1]
-
 };
