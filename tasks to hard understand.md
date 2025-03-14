@@ -18,3 +18,5 @@
 - [120. Triangle](https://leetcode.com/problems/triangle/description/?envType=study-plan-v2&envId=top-interview-150)
 - [77. Text Justification](https://leetcode.com/problems/text-justification/submissions/1554999140/?envType=study-plan-v2&envId=top-interview-150)
 - [332. Coin Change](https://leetcode.com/problems/coin-change/?envType=study-plan-v2&envId=top-interview-150)
+- [221. Maximal Square](https://leetcode.com/problems/maximal-square/description/?envType=study-plan-v2&envId=top-interview-150)
+- [146. LRU Cache](https://leetcode.com/problems/lru-cache/description/?envType=study-plan-v2&envId=top-interview-150)
