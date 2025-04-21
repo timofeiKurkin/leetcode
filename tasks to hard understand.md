@@ -24,3 +24,4 @@
 - [207. Course Schedule](https://leetcode.com/problems/course-schedule/description/?envType=study-plan-v2&envId=top-interview-150)
 - [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/?envType=study-plan-v2&envId=top-interview-150)
 - [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/description/?envType=study-plan-v2&envId=top-interview-150)
+- [433. Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/description/?envType=study-plan-v2&envId=top-interview-150)
