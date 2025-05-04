@@ -12,27 +12,26 @@ class Trie:
     def __init__(self):
         self.root = TrieNode()
 
-    def insert(self, word: str):
-        node = self.root
-        for c in word:
-            node = node.children[c]
-        node.is_word = True
+    def insert(self, word: str) -> None:
+        root = self.root
+        for s in word:
+            root = root.children[s]
+        root.is_word = True
 
 
 class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
         trie = Trie()
-        for w in words:
-            trie.insert(w)
+        for word in words:
+            trie.insert(word)
 
-        m, n = len(board), len(board[0])
         res: List[str] = []
 
-        for i in range(m):
-            for j in range(n):
-                paths = []
+        for i in range(len(board)):
+            for j in range(len(board[0])):
+                paths: List[str] = []
                 path = ""
-                self.run(trie.root, i, j, path, paths, board)
+                self.run(trie.root, board, i, j, path, paths)
                 res += paths
 
         return res
@@ -40,11 +39,11 @@ class Solution:
     def run(
         self,
         root: TrieNode,
+        board: List[List[str]],
         i: int,
         j: int,
         path: str,
         paths: List[str],
-        board: List[List[str]],
     ) -> None:
         if root.is_word:
             paths.append(path)
@@ -57,8 +56,14 @@ class Solution:
         letter = board[i][j]
         board[i][j] = "."
         for dir in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
-            new_i, new_j = i + dir[0], j + dir[1]
-            self.run(root.children[letter], new_i, new_j, path + letter, paths, board)
+            self.run(
+                root.children[letter],
+                board,
+                i + dir[0],
+                j + dir[1],
+                path + letter,
+                paths,
+            )
         board[i][j] = letter
 
         if len(root.children[letter].children) == 0:
