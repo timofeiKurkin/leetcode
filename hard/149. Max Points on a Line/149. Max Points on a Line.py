@@ -57,17 +57,19 @@ class Solution:
 
 
 solution = Solution()
-print(solution.maxPoints(points=[[1, 1], [2, 2], [3, 3]]))  # 3
-print(solution.maxPoints(points=[[1, 1], [3, 2], [5, 3], [4, 1], [2, 3], [1, 4]]))  # 4
-print(
-    solution.maxPoints(points=[[0, 0], [94911151, 94911150], [94911152, 94911151]])
-)  # 1
-print(solution.maxPoints(points=[[2, 3], [3, 3], [-5, 3]]))  # 3
+# print(solution.maxPoints(points=[[1, 1], [2, 2], [3, 3]]))  # 3
+# print(solution.maxPoints(points=[[1, 1], [3, 2], [5, 3], [4, 1], [2, 3], [1, 4]]))  # 4
+# print(
+#     solution.maxPoints(points=[[0, 0], [94911151, 94911150], [94911152, 94911151]])
+# )  # 1
+# print(solution.maxPoints(points=[[2, 3], [3, 3], [-5, 3]]))  # 3
 
-# (1, -1): [
-#   [[3, 2], [2, 3]],
-#   [[3, 2], [1, 4]],
-#   [[4, 1], [2, 3]],
-#   [[4, 1], [1, 4]],
-#   [[2, 3], [1, 4]]
-# ]
+point1 = [1, 1]
+point2 = [5, 3]
+
+dx = point1[0] - point2[0]
+dy = point1[1] - point1[1]
+gcd = math.gcd(dx, dy)
+
+slope = (dy // gcd, dx // gcd)
+print(slope)
