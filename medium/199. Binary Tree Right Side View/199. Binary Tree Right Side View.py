@@ -33,9 +33,6 @@ class Solution:
                 if curr_node.right:
                     queue.append(curr_node.right)
 
-            if len(res) and right_item >= res[-1]:
-                res.append(right_item)
-            else:
-                res.append(right_item)
+            res.append(right_item)
 
         return res
