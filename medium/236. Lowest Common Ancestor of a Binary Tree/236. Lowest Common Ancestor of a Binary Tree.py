@@ -1,3 +1,6 @@
+from typing import Optional
+
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
@@ -8,12 +11,15 @@ class TreeNode:
 
 class Solution:
     def lowestCommonAncestor(
-        self, root: "TreeNode", p: "TreeNode", q: "TreeNode"
-    ) -> "TreeNode":
+        self,
+        root: Optional["TreeNode"],
+        p: "TreeNode",
+        q: "TreeNode",
+    ) -> Optional["TreeNode"]:
         if not root:
             return None
 
-        if root.val == p or root.val == q:
+        if root.val == p.val or root.val == q.val:
             return root
 
         leftLCA = self.lowestCommonAncestor(root.left, p, q)
