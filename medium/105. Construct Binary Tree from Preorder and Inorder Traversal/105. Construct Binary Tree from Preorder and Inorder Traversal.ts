@@ -26,3 +26,5 @@ function buildTree(preorder: number[], inorder: number[]): TreeNode | null {
 
     return new TreeNode(head, left, right)
 };
+
+export {}

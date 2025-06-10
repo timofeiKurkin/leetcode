@@ -49,7 +49,7 @@ function isSymmetric(root: TreeNode | null): boolean {
     if (!root)
         return false
 
-    const checkIfNodesAreContrary = (p: TreeNode | null, q: TreeNode | null) => {
+    const checkIfNodesAreContrary = (p: TreeNode | null, q: TreeNode | null): boolean => {
         if (!p && !q) {
             return true;
         }
@@ -67,3 +67,6 @@ function isSymmetric(root: TreeNode | null): boolean {
 
     return checkIfNodesAreContrary(root.left, root.right);
 };
+
+export { }
+
