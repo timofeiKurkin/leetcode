@@ -39,3 +39,6 @@ function rotateRight(head: ListNode | null, k: number): ListNode | null {
 
     return new_head
 };
+
+
+export { }

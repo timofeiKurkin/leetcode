@@ -53,3 +53,4 @@ while (step) {
 }
 console.log(resArr);
 
+export {}

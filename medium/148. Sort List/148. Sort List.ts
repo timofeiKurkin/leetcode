@@ -54,3 +54,5 @@ function merge(firstPart: ListNode | null, secondPart: ListNode | null): ListNod
 
     return newHead.next
 }
+
+export {}
