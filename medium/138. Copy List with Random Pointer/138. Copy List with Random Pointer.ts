@@ -27,8 +27,8 @@ function copyRandomList(head: _Node | null): _Node | null {
 
     curr = head
     while (curr) {
-        nodes.get(curr)!.next = curr.next ? nodes.get(curr.next)! : null
-        nodes.get(curr)!.random = curr.random ? nodes.get(curr.random)! : null
+        nodes.get(curr)!.next = curr.next ? (nodes.get(curr.next) || null) : null
+        nodes.get(curr)!.random = curr.random ? (nodes.get(curr.random) || null) : null
         curr = curr.next
     }
 

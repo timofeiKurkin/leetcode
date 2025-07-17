@@ -8,10 +8,10 @@ class LRUCache {
     }
 
     get(key: number): number {
-        if (!this.cache.has(key))
-            return -1
+        const value = this.cache.get(key)
 
-        const value = this.cache.get(key)!
+        if (!value) return -1
+
         this.cache.delete(key)
         this.cache.set(key, value)
 
