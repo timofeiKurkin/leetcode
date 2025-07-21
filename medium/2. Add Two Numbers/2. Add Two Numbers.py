@@ -12,27 +12,35 @@ class Solution:
     def addTwoNumbers(
         self, l1: Optional[ListNode], l2: Optional[ListNode]
     ) -> Optional[ListNode]:
-        # def getNumbers(l: Optional[ListNode], counter: str) -> str:
-        #     if not l:
-        #         return counter
+        return self.solution1(l1, l2)
 
-        #     return getNumbers(l.next, str(l.val) + counter)
+    def solution1(
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
+        def getNumbers(l: Optional[ListNode], counter: str) -> str:
+            if not l:
+                return counter
 
-        # first = int(getNumbers(l1, ""))
-        # second = int(getNumbers(l2, ""))
+            return getNumbers(l.next, str(l.val) + counter)
 
-        # (*list_sum,) = str(first + second)
-        # list_sum.reverse()
+        first = int(getNumbers(l1, ""))
+        second = int(getNumbers(l2, ""))
 
-        # head = ListNode(0)
-        # new_list = head
+        (*list_sum,) = str(first + second)
+        list_sum.reverse()
 
-        # for item in list_sum:
-        #     new_list.next = ListNode(int(item))
-        #     new_list = new_list.next
+        head = ListNode(0)
+        new_list = head
 
-        # return head.next
-        
+        for item in list_sum:
+            new_list.next = ListNode(int(item))
+            new_list = new_list.next
+
+        return head.next
+
+    def solution2(
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         dummy_head = ListNode()
         current = dummy_head
         carry = 0
