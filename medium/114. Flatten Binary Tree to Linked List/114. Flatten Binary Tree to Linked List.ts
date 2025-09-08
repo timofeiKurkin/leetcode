@@ -36,3 +36,5 @@ function flatten(root: TreeNode | null): void {
 
     curr.right = right_subtree
 };
+
+export {}

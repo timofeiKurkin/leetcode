@@ -38,3 +38,5 @@ function sumNumbers(root: TreeNode | null): number {
 
     return sum
 };
+
+export {}

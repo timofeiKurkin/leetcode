@@ -13,14 +13,12 @@ class TreeNode {
     }
 }
 
-function sortedArrayToBST(nums: number[]): TreeNode | null {
-    if (!nums.length)
-        return null
+function preorderTraversal(root: TreeNode | null): number[] {
+    if (!root) return []
 
-    const middle = ~~(nums.length / 2)
-    const left = sortedArrayToBST(nums.slice(0, middle))
-    const right = sortedArrayToBST(nums.slice(middle + 1,))
-    return new TreeNode(nums[middle], left, right)
+    return [...preorderTraversal(root.left), root.val, ...preorderTraversal(root.right)]
 };
 
-export {}
+
+export { }
+

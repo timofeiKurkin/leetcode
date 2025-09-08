@@ -31,3 +31,5 @@ function getMinimumDifference(root: TreeNode | null): number {
     const [_, res] = run(root, null, Infinity)
     return res
 };
+
+export {}

@@ -52,3 +52,5 @@ class BSTIterator {
  * var param_1 = obj.next()
  * var param_2 = obj.hasNext()
  */
+
+export {}

@@ -38,3 +38,5 @@ function binaryTreePaths(root: TreeNode | null): string[] {
     run(root, [], res)
     return res
 };
+
+export {}
