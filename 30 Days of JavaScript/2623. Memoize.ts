@@ -14,6 +14,33 @@ function memoize(fn: Fn): Fn {
     }
 }
 
+// function memoize(fn: Fn): Fn & { clearCache: () => void } {
+//     // ht: ...args, res
+//     // ht.has(args) -> res
+//     // ht.set(args) -> res
+//     const ht = new Map()
+
+//     function memoized(...args: number[]) {
+//         if (ht.has(args.toString())) {
+//             return ht.get(args.toString())
+//         }
+
+//         const res = fn(...args)
+//         ht.set(args.toString(), res)
+//         return res
+//     }
+
+//     memoized.clearCache = () => {
+//         ht.clear()
+//     }
+
+//     return memoized
+// }
+
+// const memoizedFn = memoize((n: number) => n + 1)
+// memoizedFn(1)
+// memoizedFn.clearCache()
+
 
 /** 
  * let callCount = 0;
